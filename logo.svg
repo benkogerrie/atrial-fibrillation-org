@@ -1,0 +1,20 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Heart icon with ECG line -->
+  <g transform="translate(10, 10)">
+    <!-- Heart shape -->
+    <path d="M20,15 C20,10 15,5 10,5 C5,5 0,10 0,15 C0,20 10,30 10,30 C10,30 20,20 20,15 Z" 
+          fill="#2563eb" stroke="#1e40af" stroke-width="1"/>
+    
+    <!-- ECG line through heart -->
+    <path d="M5,20 L8,20 L9,15 L11,25 L13,10 L15,20 L18,20" 
+          stroke="#dc2626" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="45" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">
+    Atrial Fibrillation
+  </text>
+  <text x="45" y="40" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">
+    Information & Support
+  </text>
+</svg>
