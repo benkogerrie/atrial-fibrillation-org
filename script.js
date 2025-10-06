@@ -83,24 +83,24 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Basic validation
             if (!name || !email || !message) {
-                showNotification('Vul alle verplichte velden in.', 'error');
+                showNotification('Please fill in all required fields.', 'error');
                 return;
             }
             
             if (!isValidEmail(email)) {
-                showNotification('Voer een geldig emailadres in.', 'error');
+                showNotification('Please enter a valid email address.', 'error');
                 return;
             }
             
             // Show loading state
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Versturen...';
+            submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
             // Simulate form submission (replace with actual Formspree submission)
             setTimeout(() => {
-                showNotification('Bedankt! Je bericht is verzonden. We nemen zo snel mogelijk contact met je op.', 'success');
+                showNotification('Thank you! Your message has been sent. We will get back to you as soon as possible.', 'success');
                 this.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
@@ -280,14 +280,14 @@ function printPage() {
 function sharePage() {
     if (navigator.share) {
         navigator.share({
-            title: 'Atrial Fibrillation - Informatie & Ondersteuning',
-            text: 'Betrouwbare informatie over atrial fibrillation, triggers en supplementen.',
+            title: 'Atrial Fibrillation - Information & Support',
+            text: 'Reliable information about atrial fibrillation, triggers and supplements.',
             url: window.location.href
         });
     } else {
         // Fallback: copy to clipboard
         navigator.clipboard.writeText(window.location.href).then(() => {
-            showNotification('Link gekopieerd naar klembord!', 'success');
+            showNotification('Link copied to clipboard!', 'success');
         });
     }
 }
