@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benkogerrie.github.io/atrial-fibrillation-org/sitemap.xml
