@@ -59,88 +59,14 @@
         <h1>AFib Treatments</h1>
         <p>Rate control, rhythm control, catheter ablation, anticoagulation and lifestyle modification</p>
       </div>
-
-      <!-- Visual flow: Rate → Rhythm → Ablation → Anticoagulation -->
-      <div class="treatments-flow">
-        <div class="flow-item flow-rate">Rate control</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-item flow-rhythm">Rhythm control</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-item flow-ablation">Ablation</div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-item flow-anticoag">Anticoagulation</div>
-      </div>
-
-      <!-- Treatment overview cards -->
-      <div class="treatments-grid" style="margin-bottom:2rem;">
-        <div class="treatment-card">
-          <div class="treatment-accent accent-rate"></div>
-          <div class="treatment-body">
-            <div class="treatment-header">
-              <div class="treatment-icon icon-rate">⏱️</div>
-              <h3>Rate control</h3>
-            </div>
-            <p>Focus on slowing the heart rate to relieve symptoms and improve function.</p>
-            <div class="treatment-meta">
-              <span class="treatment-badge">Beta‑blockers</span>
-              <span class="treatment-badge">Calcium‑channel blockers</span>
-              <span class="treatment-badge">Digoxin</span>
-            </div>
-            <p style="margin-top:0.75rem;"><a href="#rate-control" class="nav-link" style="color:var(--primary-blue);">Details ↓</a></p>
-          </div>
-        </div>
-
-        <div class="treatment-card">
-          <div class="treatment-accent accent-rhythm"></div>
-          <div class="treatment-body">
-            <div class="treatment-header">
-              <div class="treatment-icon icon-rhythm">🎵</div>
-              <h3>Rhythm control</h3>
-            </div>
-            <p>Aim to restore and maintain sinus rhythm with drugs or cardioversion.</p>
-            <div class="treatment-meta">
-              <span class="treatment-badge">Class IC/III AADs</span>
-              <span class="treatment-badge">Pill‑in‑the‑pocket</span>
-              <span class="treatment-badge">Cardioversion</span>
-            </div>
-            <p style="margin-top:0.75rem;"><a href="#rhythm-control" class="nav-link" style="color:var(--accent-purple);">Details ↓</a></p>
-          </div>
-        </div>
-
-        <div class="treatment-card">
-          <div class="treatment-accent accent-ablation"></div>
-          <div class="treatment-body">
-            <div class="treatment-header">
-              <div class="treatment-icon icon-ablation">🛠️</div>
-              <h3>Catheter ablation</h3>
-            </div>
-            <p>Procedural strategy targeting triggers/substrate; often pulmonary vein isolation.</p>
-            <div class="treatment-meta">
-              <span class="treatment-badge">PV isolation</span>
-              <span class="treatment-badge">Early referral</span>
-              <span class="treatment-badge">Repeat possible</span>
-            </div>
-            <p style="margin-top:0.75rem;"><a href="#catheter-ablation" class="nav-link" style="color:var(--secondary-red);">Details ↓</a></p>
-          </div>
-        </div>
-
-        <div class="treatment-card">
-          <div class="treatment-accent accent-anticoag"></div>
-          <div class="treatment-body">
-            <div class="treatment-header">
-              <div class="treatment-icon icon-anticoag">🩸</div>
-              <h3>Anticoagulation</h3>
-            </div>
-            <p>Stroke prevention based on individual risk assessment and shared decisions.</p>
-            <div class="treatment-meta">
-              <span class="treatment-badge">CHA2DS2‑VASc</span>
-              <span class="treatment-badge">HAS‑BLED</span>
-              <span class="treatment-badge">DOACs</span>
-            </div>
-            <p style="margin-top:0.75rem;"><a href="#anticoagulation" class="nav-link" style="color:var(--accent-teal);">Details ↓</a></p>
-          </div>
-        </div>
-      </div>
+      <!-- Simple overview: four clear paragraphs -->
+      <article class="about-card" style="text-align:left; margin-bottom:2rem;">
+        <h2>Overview</h2>
+        <p><strong>Rate control:</strong> focuses on slowing the ventricular rate to reduce symptoms and improve tolerance of AFib during rest and activity. Typical options include beta‑blockers, diltiazem/verapamil or digoxin depending on blood pressure, heart failure status and exercise needs.</p>
+        <p><strong>Rhythm control:</strong> aims to restore and maintain sinus rhythm using antiarrhythmic drugs or cardioversion. Choice of therapy weighs contraindications and proarrhythmia risk; shared decision‑making is essential.</p>
+        <p><strong>Catheter ablation:</strong> a procedural approach—often pulmonary vein isolation—to eliminate triggers/substrate. Best outcomes in paroxysmal AF; repeat procedures may be necessary.</p>
+        <p><strong>Anticoagulation:</strong> personalized stroke prevention guided by CHA2DS2‑VASc and bleeding risk tools. DOACs are commonly preferred when appropriate; reassess after rhythm interventions.</p>
+      </article>
 
       <article class="about-card" style="text-align:left;">
         <h2>Goals of Treatment</h2>
