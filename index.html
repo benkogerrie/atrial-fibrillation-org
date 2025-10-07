@@ -64,7 +64,7 @@
     <link rel="alternate icon" href="favicon.svg">
 
     <!-- Minified CSS (source: styles.css) -->
-    <link rel="stylesheet" href="styles.min.css?v=9">
+    <link rel="stylesheet" href="styles.min.css?v=10">
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,8 +72,8 @@
     
     <!-- Performance optimizations -->
     <link rel="preload" href="logo.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="styles.min.css?v=9" as="style">
-    <link rel="preload" href="script.min.js?v=9" as="script">
+    <link rel="preload" href="styles.min.css?v=10" as="style">
+    <link rel="preload" href="script.min.js?v=10" as="script">
 </head>
 <body>
     <!-- Header -->
@@ -368,11 +368,11 @@
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>📧 Ask Your Question or Share Your Experience</h3>
-                    <p>Have questions about atrial fibrillation, supplements, or triggers? Or want to share your experience with supplements? We're happy to help and learn from your experiences.</p>
+                    <h3>💬 Share Your Supplement Experience</h3>
+                    <p>Help others by sharing what supplements work for you. Your experience can make a real difference for people with AFib.</p>
                     <div class="contact-details">
                         <p><strong>🕒 Response Time:</strong> Within 24 hours</p>
-                        <p><strong>💬 Share Experience:</strong> Help others by sharing what works for you</p>
+                        <p><strong>🔒 Privacy:</strong> All information is kept anonymous</p>
                     </div>
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/xblzarbz" method="POST">
@@ -384,77 +384,227 @@
                         <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required placeholder="your@email.com">
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject">
-                            <option value="general">General question</option>
-                            <option value="supplements">Question about supplements</option>
-                            <option value="supplement-experience">Share supplement experience</option>
-                            <option value="triggers">Question about triggers</option>
-                            <option value="symptoms">Question about symptoms</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
                     
-                    <!-- Supplement Experience Fields (shown when "Share supplement experience" is selected) -->
-                    <div id="supplement-fields" style="display: none;">
-                        <div class="form-group">
-                            <label>Which supplements do you use? (check all that apply)</label>
-                            <div class="supplement-checkboxes">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="taurine">
-                                    <span class="checkmark"></span>
-                                    Taurine
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="citrulline">
-                                    <span class="checkmark"></span>
-                                    Citrulline
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="magnesium">
-                                    <span class="checkmark"></span>
-                                    Magnesium
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="coq10">
-                                    <span class="checkmark"></span>
-                                    CoQ10
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="omega3">
-                                    <span class="checkmark"></span>
-                                    Omega-3
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="vitamin-d">
-                                    <span class="checkmark"></span>
-                                    Vitamin D
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="potassium">
-                                    <span class="checkmark"></span>
-                                    Potassium
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="supplements[]" value="other">
-                                    <span class="checkmark"></span>
-                                    Other
-                                </label>
+                    <!-- Supplement Experience Section -->
+                    <div class="supplement-experience-section">
+                        <h4>Your Supplement Experience</h4>
+                        <p class="section-description">Select the supplements you use and tell us about your experience:</p>
+                        
+                        <div class="supplement-list">
+                            <div class="supplement-item">
+                                <div class="supplement-header">
+                                    <label class="supplement-checkbox">
+                                        <input type="checkbox" name="supplements[]" value="taurine">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="supplement-name">Taurine</span>
+                                    </label>
+                                </div>
+                                <div class="supplement-details">
+                                    <div class="dosage-field">
+                                        <label>Dosage per day</label>
+                                        <input type="text" name="taurine_dosage" placeholder="e.g., 1000mg">
+                                    </div>
+                                    <div class="rating-field">
+                                        <label>Effectiveness (1-5 stars)</label>
+                                        <div class="star-rating">
+                                            <input type="radio" name="taurine_rating" value="1" id="taurine_1">
+                                            <label for="taurine_1">⭐</label>
+                                            <input type="radio" name="taurine_rating" value="2" id="taurine_2">
+                                            <label for="taurine_2">⭐</label>
+                                            <input type="radio" name="taurine_rating" value="3" id="taurine_3">
+                                            <label for="taurine_3">⭐</label>
+                                            <input type="radio" name="taurine_rating" value="4" id="taurine_4">
+                                            <label for="taurine_4">⭐</label>
+                                            <input type="radio" name="taurine_rating" value="5" id="taurine_5">
+                                            <label for="taurine_5">⭐</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="dosage">Dosage per day</label>
-                            <input type="text" id="dosage" name="dosage" placeholder="e.g., Taurine: 1000mg, Magnesium: 400mg, etc.">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="effectiveness">How much does it help? (0-100%)</label>
-                            <div class="slider-container">
-                                <input type="range" id="effectiveness" name="effectiveness" min="0" max="100" value="50" class="slider">
-                                <div class="slider-value">
-                                    <span id="effectiveness-value">50</span>%
+                            
+                            <div class="supplement-item">
+                                <div class="supplement-header">
+                                    <label class="supplement-checkbox">
+                                        <input type="checkbox" name="supplements[]" value="citrulline">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="supplement-name">Citrulline</span>
+                                    </label>
+                                </div>
+                                <div class="supplement-details">
+                                    <div class="dosage-field">
+                                        <label>Dosage per day</label>
+                                        <input type="text" name="citrulline_dosage" placeholder="e.g., 3000mg">
+                                    </div>
+                                    <div class="rating-field">
+                                        <label>Effectiveness (1-5 stars)</label>
+                                        <div class="star-rating">
+                                            <input type="radio" name="citrulline_rating" value="1" id="citrulline_1">
+                                            <label for="citrulline_1">⭐</label>
+                                            <input type="radio" name="citrulline_rating" value="2" id="citrulline_2">
+                                            <label for="citrulline_2">⭐</label>
+                                            <input type="radio" name="citrulline_rating" value="3" id="citrulline_3">
+                                            <label for="citrulline_3">⭐</label>
+                                            <input type="radio" name="citrulline_rating" value="4" id="citrulline_4">
+                                            <label for="citrulline_4">⭐</label>
+                                            <input type="radio" name="citrulline_rating" value="5" id="citrulline_5">
+                                            <label for="citrulline_5">⭐</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="supplement-item">
+                                <div class="supplement-header">
+                                    <label class="supplement-checkbox">
+                                        <input type="checkbox" name="supplements[]" value="magnesium">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="supplement-name">Magnesium</span>
+                                    </label>
+                                </div>
+                                <div class="supplement-details">
+                                    <div class="dosage-field">
+                                        <label>Dosage per day</label>
+                                        <input type="text" name="magnesium_dosage" placeholder="e.g., 400mg">
+                                    </div>
+                                    <div class="rating-field">
+                                        <label>Effectiveness (1-5 stars)</label>
+                                        <div class="star-rating">
+                                            <input type="radio" name="magnesium_rating" value="1" id="magnesium_1">
+                                            <label for="magnesium_1">⭐</label>
+                                            <input type="radio" name="magnesium_rating" value="2" id="magnesium_2">
+                                            <label for="magnesium_2">⭐</label>
+                                            <input type="radio" name="magnesium_rating" value="3" id="magnesium_3">
+                                            <label for="magnesium_3">⭐</label>
+                                            <input type="radio" name="magnesium_rating" value="4" id="magnesium_4">
+                                            <label for="magnesium_4">⭐</label>
+                                            <input type="radio" name="magnesium_rating" value="5" id="magnesium_5">
+                                            <label for="magnesium_5">⭐</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="supplement-item">
+                                <div class="supplement-header">
+                                    <label class="supplement-checkbox">
+                                        <input type="checkbox" name="supplements[]" value="coq10">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="supplement-name">CoQ10</span>
+                                    </label>
+                                </div>
+                                <div class="supplement-details">
+                                    <div class="dosage-field">
+                                        <label>Dosage per day</label>
+                                        <input type="text" name="coq10_dosage" placeholder="e.g., 200mg">
+                                    </div>
+                                    <div class="rating-field">
+                                        <label>Effectiveness (1-5 stars)</label>
+                                        <div class="star-rating">
+                                            <input type="radio" name="coq10_rating" value="1" id="coq10_1">
+                                            <label for="coq10_1">⭐</label>
+                                            <input type="radio" name="coq10_rating" value="2" id="coq10_2">
+                                            <label for="coq10_2">⭐</label>
+                                            <input type="radio" name="coq10_rating" value="3" id="coq10_3">
+                                            <label for="coq10_3">⭐</label>
+                                            <input type="radio" name="coq10_rating" value="4" id="coq10_4">
+                                            <label for="coq10_4">⭐</label>
+                                            <input type="radio" name="coq10_rating" value="5" id="coq10_5">
+                                            <label for="coq10_5">⭐</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="supplement-item">
+                                <div class="supplement-header">
+                                    <label class="supplement-checkbox">
+                                        <input type="checkbox" name="supplements[]" value="omega3">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="supplement-name">Omega-3</span>
+                                    </label>
+                                </div>
+                                <div class="supplement-details">
+                                    <div class="dosage-field">
+                                        <label>Dosage per day</label>
+                                        <input type="text" name="omega3_dosage" placeholder="e.g., 1000mg">
+                                    </div>
+                                    <div class="rating-field">
+                                        <label>Effectiveness (1-5 stars)</label>
+                                        <div class="star-rating">
+                                            <input type="radio" name="omega3_rating" value="1" id="omega3_1">
+                                            <label for="omega3_1">⭐</label>
+                                            <input type="radio" name="omega3_rating" value="2" id="omega3_2">
+                                            <label for="omega3_2">⭐</label>
+                                            <input type="radio" name="omega3_rating" value="3" id="omega3_3">
+                                            <label for="omega3_3">⭐</label>
+                                            <input type="radio" name="omega3_rating" value="4" id="omega3_4">
+                                            <label for="omega3_4">⭐</label>
+                                            <input type="radio" name="omega3_rating" value="5" id="omega3_5">
+                                            <label for="omega3_5">⭐</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="supplement-item">
+                                <div class="supplement-header">
+                                    <label class="supplement-checkbox">
+                                        <input type="checkbox" name="supplements[]" value="vitamin-d">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="supplement-name">Vitamin D</span>
+                                    </label>
+                                </div>
+                                <div class="supplement-details">
+                                    <div class="dosage-field">
+                                        <label>Dosage per day</label>
+                                        <input type="text" name="vitamin_d_dosage" placeholder="e.g., 2000 IU">
+                                    </div>
+                                    <div class="rating-field">
+                                        <label>Effectiveness (1-5 stars)</label>
+                                        <div class="star-rating">
+                                            <input type="radio" name="vitamin_d_rating" value="1" id="vitamin_d_1">
+                                            <label for="vitamin_d_1">⭐</label>
+                                            <input type="radio" name="vitamin_d_rating" value="2" id="vitamin_d_2">
+                                            <label for="vitamin_d_2">⭐</label>
+                                            <input type="radio" name="vitamin_d_rating" value="3" id="vitamin_d_3">
+                                            <label for="vitamin_d_3">⭐</label>
+                                            <input type="radio" name="vitamin_d_rating" value="4" id="vitamin_d_4">
+                                            <label for="vitamin_d_4">⭐</label>
+                                            <input type="radio" name="vitamin_d_rating" value="5" id="vitamin_d_5">
+                                            <label for="vitamin_d_5">⭐</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="supplement-item">
+                                <div class="supplement-header">
+                                    <label class="supplement-checkbox">
+                                        <input type="checkbox" name="supplements[]" value="potassium">
+                                        <span class="custom-checkbox"></span>
+                                        <span class="supplement-name">Potassium</span>
+                                    </label>
+                                </div>
+                                <div class="supplement-details">
+                                    <div class="dosage-field">
+                                        <label>Dosage per day</label>
+                                        <input type="text" name="potassium_dosage" placeholder="e.g., 99mg">
+                                    </div>
+                                    <div class="rating-field">
+                                        <label>Effectiveness (1-5 stars)</label>
+                                        <div class="star-rating">
+                                            <input type="radio" name="potassium_rating" value="1" id="potassium_1">
+                                            <label for="potassium_1">⭐</label>
+                                            <input type="radio" name="potassium_rating" value="2" id="potassium_2">
+                                            <label for="potassium_2">⭐</label>
+                                            <input type="radio" name="potassium_rating" value="3" id="potassium_3">
+                                            <label for="potassium_3">⭐</label>
+                                            <input type="radio" name="potassium_rating" value="4" id="potassium_4">
+                                            <label for="potassium_4">⭐</label>
+                                            <input type="radio" name="potassium_rating" value="5" id="potassium_5">
+                                            <label for="potassium_5">⭐</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -473,10 +623,10 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Ask your question here..."></textarea>
+                        <label for="message">Your Experience *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Describe your experience with these supplements. How do they help you? Any side effects? What would you tell others?"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">Share Your Experience</button>
                 </form>
             </div>
         </div>
@@ -514,7 +664,7 @@
     </footer>
 
     <!-- Minified JS (source: script.js) -->
-    <script src="script.min.js?v=9"></script>
+    <script src="script.min.js?v=10"></script>
     <!-- <script src="script.js"></script> -->
 </body>
 </html>

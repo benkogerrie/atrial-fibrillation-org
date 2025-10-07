@@ -18,32 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Show/hide supplement fields based on subject selection
-    const subjectSelect = document.getElementById('subject');
-    const supplementFields = document.getElementById('supplement-fields');
-    const messageTextarea = document.getElementById('message');
-
-    if (subjectSelect && supplementFields) {
-        subjectSelect.addEventListener('change', function() {
-            if (this.value === 'supplement-experience') {
-                supplementFields.style.display = 'block';
-                messageTextarea.placeholder = 'Describe your experience, how supplements help you, any side effects, etc.';
-            } else {
-                supplementFields.style.display = 'none';
-                messageTextarea.placeholder = 'Ask your question here...';
-            }
+    // Star rating functionality
+    document.querySelectorAll('.star-rating').forEach(rating => {
+        const stars = rating.querySelectorAll('input[type="radio"]');
+        const labels = rating.querySelectorAll('label');
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('change', function() {
+                // Remove active class from all labels
+                labels.forEach(label => label.classList.remove('active'));
+                
+                // Add active class to selected and previous stars
+                for (let i = 0; i <= index; i++) {
+                    labels[i].classList.add('active');
+                }
+            });
         });
-    }
-
-    // Slider functionality
-    const effectivenessSlider = document.getElementById('effectiveness');
-    const effectivenessValue = document.getElementById('effectiveness-value');
-    
-    if (effectivenessSlider && effectivenessValue) {
-        effectivenessSlider.addEventListener('input', function() {
-            effectivenessValue.textContent = this.value;
-        });
-    }
+    });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
