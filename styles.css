@@ -94,7 +94,7 @@ body {
 }
 
 .nav-logo .logo {
-    height: 100px;
+    height: 70px;
     width: auto;
     display: block;
 }
@@ -502,7 +502,7 @@ section {
 }
 
 .footer-logo {
-    height: 100px;
+    height: 70px;
     width: auto;
     margin-bottom: var(--spacing-lg);
     filter: brightness(0) invert(1);
