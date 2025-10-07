@@ -108,13 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = formData.get('message');
             
             // Basic validation
-            if (!name || !email || !message) {
-                showNotification('Please fill in all required fields.', 'error');
+            if (!message) {
+                showNotification('Please fill in your experience.', 'error');
                 return;
             }
             
-            if (!isValidEmail(email)) {
-                showNotification('Please enter a valid email address.', 'error');
+            if (email && !isValidEmail(email)) {
+                showNotification('Please enter a valid email address or leave it empty.', 'error');
                 return;
             }
             
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate form submission (replace with actual Formspree submission)
             setTimeout(() => {
-                showNotification('Thank you! Your message has been sent. We will get back to you as soon as possible.', 'success');
+                showNotification('Thank you! Your experience has been shared.', 'success');
                 this.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
