@@ -744,6 +744,98 @@ textarea:focus {
     margin-top: var(--spacing-2xl);
 }
 
+/* Experiences Section */
+.experiences {
+    background: var(--bg-gray);
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.experience-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-xl);
+    border-left: 4px solid var(--primary-blue);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.experience-header h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.experience-meta {
+    font-size: var(--font-size-sm);
+    color: var(--text-gray);
+    background: var(--bg-gray);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.experience-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+.experience-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.experience-details .detail {
+    background: var(--secondary-red-light);
+    color: var(--text-dark);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.experiences-note {
+    background: var(--warning-yellow);
+    color: var(--text-dark);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    font-weight: 500;
+}
+
+.experiences-note a {
+    color: var(--primary-blue-dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.experiences-note a:hover {
+    text-decoration: underline;
+}
+
 /* Treatments */
 .treatments-grid {
     display: grid;

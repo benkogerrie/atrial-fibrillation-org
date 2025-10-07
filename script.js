@@ -18,6 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Show/hide supplement fields based on subject selection
+    const subjectSelect = document.getElementById('subject');
+    const supplementFields = document.getElementById('supplement-fields');
+    const messageTextarea = document.getElementById('message');
+
+    if (subjectSelect && supplementFields) {
+        subjectSelect.addEventListener('change', function() {
+            if (this.value === 'supplement-experience') {
+                supplementFields.style.display = 'block';
+                messageTextarea.placeholder = 'Describe your experience with this supplement. How does it help you? Any side effects?';
+            } else {
+                supplementFields.style.display = 'none';
+                messageTextarea.placeholder = 'Ask your question here...';
+            }
+        });
+    }
+
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
