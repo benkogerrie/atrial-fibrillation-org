@@ -93,6 +93,7 @@ body {
 .nav-logo .logo {
     height: 40px;
     width: auto;
+    display: block;
 }
 
 .nav-menu {
@@ -502,6 +503,7 @@ section {
     width: auto;
     margin-bottom: var(--spacing-lg);
     filter: brightness(0) invert(1);
+    display: block;
 }
 
 .footer-section h4 {
