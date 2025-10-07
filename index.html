@@ -64,7 +64,7 @@
     <link rel="alternate icon" href="favicon.svg">
 
     <!-- Minified CSS (source: styles.css) -->
-    <link rel="stylesheet" href="styles.min.css?v=6">
+    <link rel="stylesheet" href="styles.min.css?v=7">
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,8 +72,8 @@
     
     <!-- Performance optimizations -->
     <link rel="preload" href="logo.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="styles.min.css?v=6" as="style">
-    <link rel="preload" href="script.min.js?v=6" as="script">
+    <link rel="preload" href="styles.min.css?v=7" as="style">
+    <link rel="preload" href="script.min.js?v=7" as="script">
 </head>
 <body>
     <!-- Header -->
@@ -121,13 +121,31 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="heart-animation">
-                    <svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M150,50 C150,30 130,15 110,15 C90,15 70,30 70,50 C70,70 110,100 110,100 C110,100 150,70 150,50 Z" 
-                              fill="#fef2f2" stroke="#dc2626" stroke-width="3" class="heart"/>
-                        <path d="M50,100 L80,100 L90,80 L110,120 L130,70 L150,100 L180,100" 
-                              stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" class="ecg-line"/>
-                    </svg>
+                <div class="crowd-knowledge-card">
+                    <div class="knowledge-header">
+                        <h3>💬 Share Your Experience</h3>
+                        <p class="knowledge-subtitle">Help others by sharing what works for you</p>
+                    </div>
+                    <div class="knowledge-content">
+                        <div class="knowledge-stats">
+                            <div class="stat">
+                                <span class="stat-number">⭐⭐⭐⭐⭐</span>
+                                <span class="stat-label">Taurine</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">⭐⭐⭐⭐</span>
+                                <span class="stat-label">Citrulline</span>
+                            </div>
+                        </div>
+                        <p class="knowledge-description">
+                            Real experiences from people with AFib. See what supplements work for others, 
+                            share your own story, and help build a community of knowledge.
+                        </p>
+                        <div class="knowledge-actions">
+                            <a href="#experiences" class="btn btn-primary">Read Experiences</a>
+                            <a href="#contact" class="btn btn-secondary">Share Your Story</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -485,7 +503,7 @@
     </footer>
 
     <!-- Minified JS (source: script.js) -->
-    <script src="script.min.js?v=6"></script>
+    <script src="script.min.js?v=7"></script>
     <!-- <script src="script.js"></script> -->
 </body>
 </html>
