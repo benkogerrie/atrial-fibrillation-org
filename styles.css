@@ -690,11 +690,7 @@ section {
     justify-content: center;
 }
 
-.star-rating input[type="radio"] {
-    display: none;
-}
-
-.star-rating label {
+.star-rating .star {
     font-size: 28px;
     cursor: pointer;
     transition: all .2s ease;
@@ -704,27 +700,21 @@ section {
     user-select: none;
     min-width: 36px;
     text-align: center;
+    display: inline-block;
 }
 
-.star-rating label:hover {
+.star-rating .star:hover {
     color: #ffc107;
     background-color: rgba(255, 193, 7, 0.1);
     transform: scale(1.1);
 }
 
-/* Only show gold stars for selected rating and below */
-.star-rating input[type="radio"]:checked + label,
-.star-rating input[type="radio"]:checked ~ label {
+.star-rating .star.active {
     color: #ffc107;
 }
 
-.star-rating label.active {
-    color: #ffc107;
-}
-
-/* Hover effect - show gold for hovered star and previous ones */
-.star-rating label:hover,
-.star-rating label:hover ~ label {
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
     color: #ffc107;
 }
 

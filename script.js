@@ -20,37 +20,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Star rating functionality
     document.querySelectorAll('.star-rating').forEach(rating => {
-        const stars = rating.querySelectorAll('input[type="radio"]');
-        const labels = rating.querySelectorAll('label');
+        const stars = rating.querySelectorAll('.star');
+        const hiddenInput = rating.querySelector('input[type="hidden"]');
         
-        // Handle star clicks
-        labels.forEach((label, index) => {
-            label.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Uncheck all radio buttons first
-                stars.forEach(star => star.checked = false);
-                // Check the clicked one
-                stars[index].checked = true;
+        stars.forEach((star, index) => {
+            star.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                hiddenInput.value = value;
                 
                 // Update visual state
-                updateStarDisplay(labels, index);
+                updateStarDisplay(stars, index);
             });
         });
         
-        // Handle radio button changes
-        stars.forEach((star, index) => {
-            star.addEventListener('change', function() {
-                updateStarDisplay(labels, index);
-            });
-        });
-        
-        function updateStarDisplay(labels, selectedIndex) {
-            // Remove active class from all labels
-            labels.forEach(label => label.classList.remove('active'));
+        function updateStarDisplay(stars, selectedIndex) {
+            // Remove active class from all stars
+            stars.forEach(star => star.classList.remove('active'));
             
             // Add active class to selected and previous stars
             for (let i = 0; i <= selectedIndex; i++) {
-                labels[i].classList.add('active');
+                stars[i].classList.add('active');
             }
         }
     });
