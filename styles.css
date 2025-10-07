@@ -712,12 +712,19 @@ section {
     transform: scale(1.1);
 }
 
+/* Only show gold stars for selected rating and below */
 .star-rating input[type="radio"]:checked + label,
 .star-rating input[type="radio"]:checked ~ label {
     color: #ffc107;
 }
 
 .star-rating label.active {
+    color: #ffc107;
+}
+
+/* Hover effect - show gold for hovered star and previous ones */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
     color: #ffc107;
 }
 

@@ -25,8 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Handle star clicks
         labels.forEach((label, index) => {
-            label.addEventListener('click', function() {
-                // Check the corresponding radio button
+            label.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Uncheck all radio buttons first
+                stars.forEach(star => star.checked = false);
+                // Check the clicked one
                 stars[index].checked = true;
                 
                 // Update visual state
