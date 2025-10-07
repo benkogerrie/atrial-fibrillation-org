@@ -20,6 +20,9 @@
     --border-gray: #e5e7eb;
     --success-green: #10b981;
     --warning-yellow: #f59e0b;
+    --accent-purple: #7c3aed;
+    --accent-teal: #14b8a6;
+    --accent-rose: #e11d48;
     
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -796,4 +799,75 @@ textarea:focus {
     border-radius: 999px;
     font-size: var(--font-size-xs);
     font-weight: 600;
+}
+
+/* Treatments Flow */
+.treatments-flow {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--spacing-md);
+    align-items: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.flow-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background: var(--bg-gray);
+    border: 1px solid var(--border-gray);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.flow-arrow {
+    text-align: center;
+    color: var(--text-gray);
+    font-weight: 700;
+}
+
+.flow-rate { border-left: 4px solid var(--primary-blue); }
+.flow-rhythm { border-left: 4px solid var(--accent-purple); }
+.flow-ablation { border-left: 4px solid var(--secondary-red); }
+.flow-anticoag { border-left: 4px solid var(--accent-teal); }
+
+/* Treatment header with icon */
+.treatment-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.treatment-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.icon-rate { background: var(--primary-blue); }
+.icon-rhythm { background: var(--accent-purple); }
+.icon-ablation { background: var(--secondary-red); }
+.icon-anticoag { background: var(--accent-teal); }
+
+/* Accent bars per card */
+.accent-rate { background: var(--primary-blue); }
+.accent-rhythm { background: var(--accent-purple); }
+.accent-ablation { background: var(--secondary-red); }
+.accent-anticoag { background: var(--accent-teal); }
+
+@media (max-width: 768px) {
+    .treatments-flow {
+        grid-template-columns: 1fr 40px 1fr;
+        row-gap: var(--spacing-sm);
+    }
+    .flow-arrow { transform: rotate(90deg); }
 }
