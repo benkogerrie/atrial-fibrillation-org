@@ -740,3 +740,60 @@ textarea:focus {
 .research .disclaimer {
     margin-top: var(--spacing-2xl);
 }
+
+/* Treatments */
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.treatment-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-gray);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.treatment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.treatment-accent {
+    height: 6px;
+}
+
+.treatment-body {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.treatment-body h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.treatment-body h4 {
+    font-size: var(--font-size-base);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-blue-dark);
+}
+
+.treatment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.treatment-badge {
+    background: var(--bg-gray);
+    border: 1px solid var(--border-gray);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
