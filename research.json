@@ -1,0 +1,102 @@
+[
+  {
+    "topic": "Taurine",
+    "title": "Elimination of cardiac arrhythmias using oral taurine with L-arginine",
+    "journal": "Case reports (2006)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16797868/",
+    "summary": "Patients with frequent premature atrial/ventricular contractions received 10–20 g taurine + 4–6 g L-arginine daily; ectopy markedly reduced. Not a controlled AF trial.",
+    "type": "Case reports",
+    "population": "Humans",
+    "evidence": "low"
+  },
+  {
+    "topic": "Taurine",
+    "title": "Taurine prevents electrical remodeling in acetylcholine–CaCl2 induced atrial fibrillation rats",
+    "journal": "Preclinical rat AF model (2017)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28849502/",
+    "summary": "Taurine shortened AF duration and prevented electrical remodeling by normalizing ion-channel mRNA and potassium levels.",
+    "type": "Preclinical",
+    "population": "Rats",
+    "evidence": "moderate"
+  },
+  {
+    "topic": "Taurine",
+    "title": "Taurine reverses atrial structural remodeling in acetylcholine–CaCl2 induced atrial fibrillation rats",
+    "journal": "Preclinical rat AF model (2017)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28849503/",
+    "summary": "Taurine reduced atrial fibrosis, inflammation and dilation in chronic AF rats, suggesting protection against structural remodeling.",
+    "type": "Preclinical",
+    "population": "Rats",
+    "evidence": "moderate"
+  },
+  {
+    "topic": "Taurine",
+    "title": "Restoring autonomic balance in an atrial fibrillation rat model",
+    "journal": "Experimental AF in rats (2022)",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S1094715922013666",
+    "summary": "Taurine restored autonomic (sympatho-vagal) balance and reduced arrhythmia vulnerability after myocardial injury.",
+    "type": "Preclinical",
+    "population": "Rats",
+    "evidence": "moderate"
+  },
+  {
+    "topic": "Taurine",
+    "title": "Therapeutic effects of a taurine‑magnesium coordination compound",
+    "journal": "Acta Pharmacologica Sinica (2017)",
+    "url": "https://www.nature.com/articles/aps201786",
+    "summary": "A taurine–magnesium complex reduced arrhythmia incidence and stabilized cardiac electrical activity.",
+    "type": "Preclinical",
+    "population": "Animal model",
+    "evidence": "moderate"
+  },
+  {
+    "topic": "Taurine",
+    "title": "Sulfur‑containing amino acids and atrial remodeling (review)",
+    "journal": "Mechanistic review (2022)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35113037/",
+    "summary": "Reviews preclinical evidence that taurine may inhibit atrial fibrosis and oxidative stress—key pathways in AF. No human AF RCTs yet.",
+    "type": "Review",
+    "population": "—",
+    "evidence": "review"
+  },
+  {
+    "topic": "Citrulline/NO",
+    "title": "Sodium nitroprusside reduces postoperative atrial fibrillation after CABG",
+    "journal": "Randomized trial (2004)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15172469/",
+    "summary": "Intraoperative NO donor lowered AF incidence from 27% to 12% and shortened duration in CABG patients—supports NO pathway relevance.",
+    "type": "Randomized controlled trial",
+    "population": "Humans (CABG)",
+    "evidence": "moderate"
+  },
+  {
+    "topic": "Citrulline/NO",
+    "title": "Myocardial L‑citrulline and L‑arginine depletion in aged AF mice",
+    "journal": "Mouse metabolomics (2024)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39226522/",
+    "summary": "Aged AF mice showed reduced cardiac citrulline/arginine vs. adults, linking impaired NO metabolism to AF substrate.",
+    "type": "Preclinical",
+    "population": "Mice",
+    "evidence": "moderate"
+  },
+  {
+    "topic": "Citrulline/NO",
+    "title": "Plasma citrulline increases after successful AF ablation",
+    "journal": "Human metabolomic study (2020)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32302591/",
+    "summary": "Citrulline levels rose post-ablation, suggesting association with restored sinus rhythm (correlative, not interventional).",
+    "type": "Observational",
+    "population": "Humans",
+    "evidence": "low"
+  },
+  {
+    "topic": "Citrulline/NO",
+    "title": "Systematic review of L‑citrulline supplementation and cardiovascular effects",
+    "journal": "Systematic review (2018)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30093258/",
+    "summary": "Oral citrulline increases plasma arginine and NO bioavailability and improves vascular function; no direct AF outcome trials.",
+    "type": "Systematic review",
+    "population": "Humans",
+    "evidence": "review"
+  }
+]
