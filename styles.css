@@ -736,3 +736,7 @@ textarea:focus {
 .research-link:hover {
     background: var(--primary-blue-dark);
 }
+
+.research .disclaimer {
+    margin-top: var(--spacing-2xl);
+}
