@@ -64,7 +64,7 @@
     <link rel="alternate icon" href="favicon.svg">
 
     <!-- Minified CSS (source: styles.css) -->
-    <link rel="stylesheet" href="styles.min.css?v=7">
+    <link rel="stylesheet" href="styles.min.css?v=8">
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,8 +72,8 @@
     
     <!-- Performance optimizations -->
     <link rel="preload" href="logo.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="styles.min.css?v=7" as="style">
-    <link rel="preload" href="script.min.js?v=7" as="script">
+    <link rel="preload" href="styles.min.css?v=8" as="style">
+    <link rel="preload" href="script.min.js?v=8" as="script">
 </head>
 <body>
     <!-- Header -->
@@ -377,12 +377,12 @@
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/xblzarbz" method="POST">
                     <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name (optional)</label>
+                        <input type="text" id="name" name="name" placeholder="Your name (will be kept anonymous)">
                     </div>
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
@@ -399,25 +399,68 @@
                     <!-- Supplement Experience Fields (shown when "Share supplement experience" is selected) -->
                     <div id="supplement-fields" style="display: none;">
                         <div class="form-group">
-                            <label for="supplement">Supplement Name *</label>
-                            <select id="supplement" name="supplement">
-                                <option value="">Select supplement...</option>
-                                <option value="taurine">Taurine</option>
-                                <option value="citrulline">Citrulline</option>
-                                <option value="magnesium">Magnesium</option>
-                                <option value="coq10">CoQ10</option>
-                                <option value="omega3">Omega-3</option>
-                                <option value="vitamin-d">Vitamin D</option>
-                                <option value="potassium">Potassium</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <label>Which supplements do you use? (check all that apply)</label>
+                            <div class="supplement-checkboxes">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="taurine">
+                                    <span class="checkmark"></span>
+                                    Taurine
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="citrulline">
+                                    <span class="checkmark"></span>
+                                    Citrulline
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="magnesium">
+                                    <span class="checkmark"></span>
+                                    Magnesium
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="coq10">
+                                    <span class="checkmark"></span>
+                                    CoQ10
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="omega3">
+                                    <span class="checkmark"></span>
+                                    Omega-3
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="vitamin-d">
+                                    <span class="checkmark"></span>
+                                    Vitamin D
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="potassium">
+                                    <span class="checkmark"></span>
+                                    Potassium
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="supplements[]" value="other">
+                                    <span class="checkmark"></span>
+                                    Other
+                                </label>
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="dosage">Dosage (mg per day)</label>
-                            <input type="text" id="dosage" name="dosage" placeholder="e.g., 1000mg, 2 capsules">
+                            <label for="dosage">Dosage per day</label>
+                            <input type="text" id="dosage" name="dosage" placeholder="e.g., Taurine: 1000mg, Magnesium: 400mg, etc.">
                         </div>
+                        
                         <div class="form-group">
-                            <label for="duration">How long have you been using it?</label>
+                            <label for="effectiveness">How much does it help? (0-100%)</label>
+                            <div class="slider-container">
+                                <input type="range" id="effectiveness" name="effectiveness" min="0" max="100" value="50" class="slider">
+                                <div class="slider-value">
+                                    <span id="effectiveness-value">50</span>%
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="duration">How long have you been using supplements?</label>
                             <select id="duration" name="duration">
                                 <option value="">Select duration...</option>
                                 <option value="less-than-1-month">Less than 1 month</option>
@@ -427,43 +470,11 @@
                                 <option value="more-than-1-year">More than 1 year</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="effectiveness">How effective is it? (1-5 stars)</label>
-                            <select id="effectiveness" name="effectiveness">
-                                <option value="">Select rating...</option>
-                                <option value="1">⭐ (1 star) - Not helpful</option>
-                                <option value="2">⭐⭐ (2 stars) - Slightly helpful</option>
-                                <option value="3">⭐⭐⭐ (3 stars) - Moderately helpful</option>
-                                <option value="4">⭐⭐⭐⭐ (4 stars) - Very helpful</option>
-                                <option value="5">⭐⭐⭐⭐⭐ (5 stars) - Extremely helpful</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="afib-type">Type of AFib (optional)</label>
-                            <select id="afib-type" name="afib-type">
-                                <option value="">Select type...</option>
-                                <option value="paroxysmal">Paroxysmal (comes and goes)</option>
-                                <option value="persistent">Persistent (lasts longer)</option>
-                                <option value="permanent">Permanent (always present)</option>
-                                <option value="unknown">Not sure</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="age-group">Age group (optional)</label>
-                            <select id="age-group" name="age-group">
-                                <option value="">Select age group...</option>
-                                <option value="under-30">Under 30</option>
-                                <option value="30-40">30-40</option>
-                                <option value="40-50">40-50</option>
-                                <option value="50-60">50-60</option>
-                                <option value="60-70">60-70</option>
-                                <option value="over-70">Over 70</option>
-                            </select>
-                        </div>
                     </div>
+                    
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Ask your question here..."></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Describe your experience, how supplements help you, any side effects, etc."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
@@ -503,7 +514,7 @@
     </footer>
 
     <!-- Minified JS (source: script.js) -->
-    <script src="script.min.js?v=7"></script>
+    <script src="script.min.js?v=8"></script>
     <!-- <script src="script.js"></script> -->
 </body>
 </html>

@@ -27,11 +27,21 @@ document.addEventListener('DOMContentLoaded', function() {
         subjectSelect.addEventListener('change', function() {
             if (this.value === 'supplement-experience') {
                 supplementFields.style.display = 'block';
-                messageTextarea.placeholder = 'Describe your experience with this supplement. How does it help you? Any side effects?';
+                messageTextarea.placeholder = 'Describe your experience, how supplements help you, any side effects, etc.';
             } else {
                 supplementFields.style.display = 'none';
                 messageTextarea.placeholder = 'Ask your question here...';
             }
+        });
+    }
+
+    // Slider functionality
+    const effectivenessSlider = document.getElementById('effectiveness');
+    const effectivenessValue = document.getElementById('effectiveness-value');
+    
+    if (effectivenessSlider && effectivenessValue) {
+        effectivenessSlider.addEventListener('input', function() {
+            effectivenessValue.textContent = this.value;
         });
     }
 
