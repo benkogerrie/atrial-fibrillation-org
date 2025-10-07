@@ -650,11 +650,12 @@ section {
 
 .supplement-details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-md);
     margin-top: var(--spacing-md);
     padding-top: var(--spacing-md);
     border-top: 1px solid var(--border-gray);
+    align-items: end;
 }
 
 .dosage-field, .rating-field {
@@ -684,8 +685,9 @@ section {
 /* Star Rating */
 .star-rating {
     display: flex;
-    gap: 2px;
+    gap: 4px;
     align-items: center;
+    justify-content: center;
 }
 
 .star-rating input[type="radio"] {
@@ -693,23 +695,40 @@ section {
 }
 
 .star-rating label {
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     transition: all .2s ease;
     color: #ddd;
+    padding: 4px;
+    border-radius: 4px;
+    user-select: none;
+    min-width: 36px;
+    text-align: center;
 }
 
-.star-rating label:hover,
-.star-rating input[type="radio"]:checked ~ label,
-.star-rating label:hover ~ label {
+.star-rating label:hover {
+    color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.1);
+    transform: scale(1.1);
+}
+
+.star-rating input[type="radio"]:checked + label,
+.star-rating input[type="radio"]:checked ~ label {
     color: #ffc107;
 }
 
-.star-rating input[type="radio"]:checked + label {
+.star-rating label.active {
     color: #ffc107;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .supplement-details {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
 @media (max-width: 768px) {
     .supplement-details {
         grid-template-columns: 1fr;
@@ -718,6 +737,11 @@ section {
     
     .star-rating {
         justify-content: center;
+    }
+    
+    .star-rating label {
+        font-size: 24px;
+        min-width: 32px;
     }
 }
 

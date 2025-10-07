@@ -23,17 +23,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const stars = rating.querySelectorAll('input[type="radio"]');
         const labels = rating.querySelectorAll('label');
         
-        stars.forEach((star, index) => {
-            star.addEventListener('change', function() {
-                // Remove active class from all labels
-                labels.forEach(label => label.classList.remove('active'));
+        // Handle star clicks
+        labels.forEach((label, index) => {
+            label.addEventListener('click', function() {
+                // Check the corresponding radio button
+                stars[index].checked = true;
                 
-                // Add active class to selected and previous stars
-                for (let i = 0; i <= index; i++) {
-                    labels[i].classList.add('active');
-                }
+                // Update visual state
+                updateStarDisplay(labels, index);
             });
         });
+        
+        // Handle radio button changes
+        stars.forEach((star, index) => {
+            star.addEventListener('change', function() {
+                updateStarDisplay(labels, index);
+            });
+        });
+        
+        function updateStarDisplay(labels, selectedIndex) {
+            // Remove active class from all labels
+            labels.forEach(label => label.classList.remove('active'));
+            
+            // Add active class to selected and previous stars
+            for (let i = 0; i <= selectedIndex; i++) {
+                labels[i].classList.add('active');
+            }
+        }
     });
 
     // Close mobile menu when clicking outside
